@@ -1,0 +1,214 @@
+[
+{
+"id":1,
+"titulo":"Bolo de Chocolate com Coco",
+"categoria":"Doce",
+"img":"../imagens/bolo1.jpg",
+"preco":"15,50",
+"descricao":"Bolo de chocolate com coco"
+},
+
+{
+"id":2,
+"titulo":"Brownie Tradicional",
+"categoria":"Doce",
+"img":"../imagens/brownie.jpg",
+"preco":"8,50",
+"descricao":"Brownie de chocolate artesanal"
+},
+
+{
+"id":3,
+"titulo":"Café Expresso",
+"categoria":"Bebida Quente",
+"img":"../imagens/cafe.jpg",
+"preco":"8,00",
+"descricao":"Café expresso forte"
+},
+
+{
+"id":4,
+"titulo":"Cappuccino",
+"categoria":"Bebida Quente",
+"img":"../imagens/cappuccino.jpg",
+"preco":"12,00",
+"descricao":"Café com leite cremoso"
+},
+
+{
+"id":5,
+"titulo":"Chocolate Gelado",
+"categoria":"Bebida Gelada",
+"img":"imagens/chocolate.jpg",
+"preco":"10,00",
+"descricao":"Chocolate gelado refrescante"
+},
+
+{
+"id":6,
+"titulo":"Agua  Mineral",
+"categoria":"Bebida Gelada",
+"img":"imagens/agua.jpg",
+"preco":"4,00",
+"descricao":"Agua pra refrescar"
+},
+
+{
+"id":7,
+"titulo":"Brigadeiro Gourmet",
+"categoria":"Doce",
+"img":"imagens/brigadeirogourmet.jpg",
+"preco":"5,00",
+"descricao":"Brigadeiro Gourmet para quem é fã de academia!!"
+},
+
+{
+"id":8,
+"titulo":"Refrigerante Guarana",
+"categoria":"Bebida gelada",
+"img":"imagens/guarana.jpg",
+"preco":"6,00",
+"descricao":"Para refrescar sua bela tarde!!"
+},
+
+{
+"id":9,
+"titulo":"Bolo de Brigadeiro e Nutella",
+"categoria":"Doces",
+"img":"imagens/bolonutella.jpg",
+"preco":"20,00",
+"descricao":"Bolo gostoso e viciante!!"
+},
+
+
+{
+"id":10,
+"titulo":"Bolo de Chocolate com Morango",
+"categoria":"Doces",
+"img":"imagens/bolomorango.jpg",
+"preco":"20,00",
+"descricao":"Bolo gostoso e viciante!!"
+},
+
+{
+"id":11,
+"titulo":"Bolo de Cenoura com Cobertura",
+"categoria":"Doces",
+"img":"imagens/bolocenoura.jpg",
+"preco":"18,00",
+"descricao":"Bolo com uma bela cobertura de chocolate!!"
+},
+
+
+{
+"id":12,
+"titulo":"Bolo Brigadeiro com Rúcula",
+"categoria":"Doces",
+"img":"imagens/bolorucula.jpg",
+"preco":"25,00",
+"descricao":"Bolo de brigadeiro com Rúcula!!"
+},
+
+{
+"id":13,
+"titulo":"Cookie com Gotas de Chocolate",
+"categoria":"Doces",
+"img":"imagens/Cookie.jpg",
+"preco":"6,50",
+"descricao":"Biscoito crocante com gotas de chocolate pra adoçar seu dia!!"
+},
+
+{
+"id":14,
+"titulo":"Brigadeiro Tradicional",
+"categoria":"Doces",
+"img":"imagens/brigadeiro.jpg",
+"preco":"4,00",
+"descricao":"Brigadeiro muito gostoso!!"
+},
+
+{
+"id":15,
+"titulo":"Beijinho",
+"categoria":"Doces",
+"img":"imagens/beijinho.jpg",
+"preco":"4,00",
+"descricao":"Para voce que gosta de um beijinho , prove este belo beijinho de coco!!"
+},
+
+{
+"id":16,
+"titulo":"Casadinho",
+"categoria":"Doces",
+"img":"imagens/casadinho.jpg",
+"preco":"4,50",
+"descricao":"um belo doce!!"
+},
+
+{
+"id":17,
+"titulo":"Smoothies de Frutas",
+"categoria":"Bebidas Geladas",
+"img":"imagens/frutas.jpg",
+"preco":"12,00",
+"descricao":"uma bebida gelada que mata sua sede!!"
+},
+
+{
+"id":18,
+"titulo":"Smoothies de Frutas",
+"categoria":"Bebidas Geladas",
+"img":"imagens/frutas.jpg",
+"preco":"12,00",
+"descricao":"uma bebida gelada que mata sua cede!!"
+},
+
+{
+"id":19,
+"titulo":"Limonada Gelada",
+"categoria":"Bebida Gelada",
+"img":"imagens/chocolate.jpg",
+"preco":"09,00",
+"descricao":"Limonada gelada para refrescar a sua melhor tarde."
+},
+
+{
+"id":20,
+"titulo":"Café Americano",
+"categoria":"Bebida Quente",
+"img":"imagens/chocolate.jpg",
+"preco":"08,50",
+"descricao":"O café para os amantes da américa."
+}, 
+
+
+{
+"id":21,
+"titulo":"Café Latte",
+"categoria":"Bebida Quente",
+"img":"imagens/chocolate.jpg",
+"preco":"10,00",
+"descricao":"Seu café de um jeito diferente."
+},
+
+{
+"id":22,
+"titulo":"Frappuccino de Café",
+"categoria":"Bebida Gelada",
+"img":"imagens/chocolate.jpg",
+"preco":"10,00",
+"descricao":"O diferencial para os amantes de café gelado."
+},
+
+{
+"id":23,
+"titulo":"Chá Gelado Artesanal ",
+"categoria":"Bebida Gelada",
+"img":"imagens/chocolate.jpg",
+"preco":"08,50",
+"descricao":"Chá gelado para ficar zen."
+}
+
+
+
+]
