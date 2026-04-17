@@ -17,7 +17,7 @@ let cardapio = [];
 
 async function carregarCardapio(){
 
-    const resposta = await fetch("data/cardapio.json");
+    const resposta = await fetch("../data/cardapio.json");
 
     cardapio = await resposta.json();
 
@@ -37,7 +37,7 @@ function renderizarCardapio(lista){
 
         const card = document.createElement("div");
 
-        card.classList.add("card-item");
+        card.classList.add("item");
 
         card.innerHTML = `
             <h3>${item.titulo}</h3>
@@ -68,7 +68,7 @@ buscaCardapio.addEventListener("input",function(){
 
     const texto = buscaCardapio.value.toLowerCase();
 
-    const filtrados = cardapio.filter(function(item){
+    const filtrados = cardapio.filter((item) => {
         return item.titulo.toLowerCase().includes(texto);
     });
 
