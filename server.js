@@ -4,15 +4,23 @@
 ==================================
 */
 
-require("dotenv").config(); 
-const pool = require("./db.js");
+require("dotenv").config(); // carrega as variáveis do arquivo .env
+const pool = require("./db.js"); // importa a conexão com o banco de dados
 
+// 1 - Inporta o Express - ele cria e gerencia o nosso servidor
 const express = require("express");
+
+// 2 - Importa o CORS - permite que o navegador "converse" com o servidor (frontend - backend)
 const cors = require("cors");
 
+// 3 - Cria o servidor (como ligar um computador)
 const app = express();
 
+// 4 - Ativa o CORS - libera a comunicação entre o front-end e o back-end
 app.use(cors());
+
+// 5 - Ativa o leitor de JSON - permite entender os dados recebidos
+// sem isso, o servidor não consegue ler o  que o formulário envia
 app.use(express.json());
 
 
@@ -22,7 +30,8 @@ app.use(express.json());
 ==================================
 */
 
-// POST mensagem
+// 6. Define a rota POST "/mensagem"
+// Quando o form enviar os dados para /mensagem, essa função roda
 app.post("/mensagem", async (req,res) => {
     try{
         const nome = req.body.nome
@@ -30,7 +39,7 @@ app.post("/mensagem", async (req,res) => {
         const mensagem = req.body.mensagem
         
         if(!nome || !email || !mensagem){
-            return res.status(400).json({mensagem: "Preencha todos os campos"});
+            return res.status(400).json({mensagem: "Preecha todos os campos"});
         };
 
         await pool.execute(
@@ -40,16 +49,26 @@ app.post("/mensagem", async (req,res) => {
 
         res.status(201).json({mensagem: "Mensagem enviada com sucesso!"});
 
+        res.send("Mensagem recebida com sucesso!");
     } catch(error){
         console.error(error);
         res.status(500).json({ erro: "Erro ao enviar mensagem" });
     }
 });
 
-// ROTA INICIAL
+// 9. Inicia o servidor na porta 3000
+// Depois disso, o servidor fica "ouvindo" por novas mensagens
+app.listen(3000, ()=>{
+    console.log("Servidor rodando em http://localhost:3000");
+});
+
+
 app.get("/", (req, res) => {
     res.send("API Candy Coffee funcionando!");
 });
+
+
+// 🔥 ADICIONADO (sem mexer no resto)
 
 // GET mensagens
 app.get("/mensagem", async (req, res) => {
@@ -72,72 +91,3 @@ app.get("/produtos", async (req, res) => {
         res.status(500).json({ erro: "Erro ao buscar produtos" });
     }
 });
-
-// POST produtos
-app.post("/produtos", async (req, res) => {
-    try {
-        const { nome, preco } = req.body;
-
-        if (!nome || !preco) {
-            return res.status(400).json({ mensagem: "Preencha todos os campos" });
-        }
-
-        await pool.execute(
-            "INSERT INTO produtos (nome, preco) VALUES (?, ?)",
-            [nome, preco]
-        );
-
-        res.status(201).json({ mensagem: "Produto criado!" });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ erro: "Erro ao criar produto" });
-    }
-});
-
-
-/* 
-==================================
-3 PARTE - INICIAR SERVIDOR
-==================================
-*/
-
-app.listen(3000, ()=>{
-    console.log("Servidor rodando em http://localhost:3000");
-});
-
-// UPDATE
-app.put("/produtos/:id", async (req, res) => {
-    try {
-        const { nome, preco } = req.body;
-        const { id } = req.params;
-
-        await pool.execute(
-            "UPDATE produtos SET nome = ?, preco = ? WHERE id = ?",
-            [nome, preco, id]
-        );
-
-        res.json({ mensagem: "Produto atualizado!" });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ erro: "Erro ao atualizar produto" });
-    }
-});
-
-//DELETE 
-
-app.delete("/produtos/:id", async (req, res) => {
-    try {
-        const { id } = req.params;
-
-        await pool.execute(
-            "DELETE FROM produtos WHERE id = ?",
-            [id]
-        );
-
-        res.json({ mensagem: "Produto deletado!" });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ erro: "Erro ao deletar produto" });
-    }
-});
-
