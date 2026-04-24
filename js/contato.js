@@ -8,14 +8,15 @@ form.addEventListener("submit", async function(event){
     //  (comprotamento padrão do form)
     event.preventDefault();
 
-    // 4 - Lê o que o usuário digitou em cada campo
-    const nome = document.getElementById("nome").value; //HTMLInputElement -> valor
-    const email = document.getElementById("email").value; //HTMLInputElement -> valor
-    const mensagem = document.getElementById("mensagem").value; //HTMLTextAreaElement ->valor
+    // 4 - Lê o que o usuário digitou em cada campo  
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem").value;
 
-    // 5 - Agrupa os dados em um OBJETO 
+    // 5 - Agrupa os dados em um objeto 
     // (como uma caixinha organizadora)
     const novaMensagem = {nome,email,mensagem}
+
 
     // ENVIANDO OS DADOS PARA O SERVIDOR
     // com tratamento de excessão
@@ -44,8 +45,7 @@ form.addEventListener("submit", async function(event){
 
     }catch(erro){
         // 10 - Se algo deu errado, avisa o usuário
-        //alert(`Erro: ${erro}`);
-        console.error(erro);
+        alert(`Erro: ${erro}`);
     }
 
 })
