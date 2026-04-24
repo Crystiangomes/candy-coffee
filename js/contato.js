@@ -22,7 +22,7 @@ form.addEventListener("submit", async function(event){
     // com tratamento de excessão
     try{
         // 6 - Envia os dados para ao servidor usando fetch
-        const resposta = await fetch("http://localhost:3000/mensagem",
+        const resposta = await fetch("https://candy-coffee.onrender.com/mensagem",
             {
             method:"POST", // POST = estamos enviando os dados
             headers: {
